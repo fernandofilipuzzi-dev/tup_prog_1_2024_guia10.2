@@ -1,4 +1,4 @@
-﻿namespace Ejercicio3
+﻿namespace Ejercicio3_ConClaseControladora_Modal
 {
     partial class FormPrincipal
     {
@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.gbOpcion = new System.Windows.Forms.GroupBox();
-            this.rbSuperaronAlPromedio = new System.Windows.Forms.RadioButton();
-            this.rbTodos = new System.Windows.Forms.RadioButton();
-            this.lbxResultadoListado = new System.Windows.Forms.ListBox();
-            this.btnVerResultados = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbPromedio = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
@@ -47,93 +41,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbLU = new System.Windows.Forms.TextBox();
             this.btmVerAlumno = new System.Windows.Forms.Button();
-            this.groupBox3.SuspendLayout();
-            this.gbOpcion.SuspendLayout();
+            this.btnVerResultados = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbDatosAlumno.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.gbOpcion);
-            this.groupBox3.Controls.Add(this.lbxResultadoListado);
-            this.groupBox3.Controls.Add(this.btnVerResultados);
-            this.groupBox3.Location = new System.Drawing.Point(503, 17);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(423, 286);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Resultados";
-            // 
-            // gbOpcion
-            // 
-            this.gbOpcion.Controls.Add(this.rbSuperaronAlPromedio);
-            this.gbOpcion.Controls.Add(this.rbTodos);
-            this.gbOpcion.Location = new System.Drawing.Point(221, 173);
-            this.gbOpcion.Name = "gbOpcion";
-            this.gbOpcion.Size = new System.Drawing.Size(195, 92);
-            this.gbOpcion.TabIndex = 7;
-            this.gbOpcion.TabStop = false;
-            this.gbOpcion.Text = "Opciones";
-            // 
-            // rbSuperaronAlPromedio
-            // 
-            this.rbSuperaronAlPromedio.AutoSize = true;
-            this.rbSuperaronAlPromedio.Location = new System.Drawing.Point(15, 30);
-            this.rbSuperaronAlPromedio.Name = "rbSuperaronAlPromedio";
-            this.rbSuperaronAlPromedio.Size = new System.Drawing.Size(171, 21);
-            this.rbSuperaronAlPromedio.TabIndex = 8;
-            this.rbSuperaronAlPromedio.Text = "Superaron el promedio";
-            this.rbSuperaronAlPromedio.UseVisualStyleBackColor = true;
-            // 
-            // rbTodos
-            // 
-            this.rbTodos.AutoSize = true;
-            this.rbTodos.Checked = true;
-            this.rbTodos.Location = new System.Drawing.Point(15, 56);
-            this.rbTodos.Name = "rbTodos";
-            this.rbTodos.Size = new System.Drawing.Size(66, 21);
-            this.rbTodos.TabIndex = 9;
-            this.rbTodos.TabStop = true;
-            this.rbTodos.Text = "Todos";
-            this.rbTodos.UseVisualStyleBackColor = true;
-            // 
-            // lbxResultadoListado
-            // 
-            this.lbxResultadoListado.FormattingEnabled = true;
-            this.lbxResultadoListado.ItemHeight = 16;
-            this.lbxResultadoListado.Location = new System.Drawing.Point(8, 23);
-            this.lbxResultadoListado.Margin = new System.Windows.Forms.Padding(4);
-            this.lbxResultadoListado.Name = "lbxResultadoListado";
-            this.lbxResultadoListado.Size = new System.Drawing.Size(206, 260);
-            this.lbxResultadoListado.TabIndex = 3;
-            // 
-            // btnVerResultados
-            // 
-            this.btnVerResultados.Location = new System.Drawing.Point(271, 92);
-            this.btnVerResultados.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVerResultados.Name = "btnVerResultados";
-            this.btnVerResultados.Size = new System.Drawing.Size(91, 69);
-            this.btnVerResultados.TabIndex = 6;
-            this.btnVerResultados.Text = "Ver resultados";
-            this.btnVerResultados.UseVisualStyleBackColor = true;
-            this.btnVerResultados.Click += new System.EventHandler(this.btnVerResultados_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lbPromedio);
             this.groupBox2.Controls.Add(this.btnCalcular);
-            this.groupBox2.Location = new System.Drawing.Point(16, 229);
+            this.groupBox2.Controls.Add(this.btnVerResultados);
+            this.groupBox2.Location = new System.Drawing.Point(11, 228);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(479, 74);
-            this.groupBox2.TabIndex = 8;
+            this.groupBox2.Size = new System.Drawing.Size(479, 116);
+            this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Mostrar promedio";
+            this.groupBox2.Text = "Mostrar Resultados";
             // 
             // lbPromedio
             // 
@@ -142,7 +68,7 @@
             this.lbPromedio.Location = new System.Drawing.Point(120, 36);
             this.lbPromedio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPromedio.Name = "lbPromedio";
-            this.lbPromedio.Size = new System.Drawing.Size(79, 17);
+            this.lbPromedio.Size = new System.Drawing.Size(59, 13);
             this.lbPromedio.TabIndex = 2;
             this.lbPromedio.Text = "lbPromedio";
             // 
@@ -153,7 +79,7 @@
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(115, 42);
             this.btnCalcular.TabIndex = 1;
-            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.Text = "Ver Promedio General";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
@@ -163,12 +89,12 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tbLU);
             this.groupBox1.Controls.Add(this.btmVerAlumno);
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Location = new System.Drawing.Point(11, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(479, 207);
-            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del alumno";
             // 
@@ -206,7 +132,7 @@
             this.label3.Location = new System.Drawing.Point(63, 71);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 17);
+            this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nota";
             // 
@@ -215,7 +141,7 @@
             this.tbNombre.Location = new System.Drawing.Point(111, 36);
             this.tbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(187, 23);
+            this.tbNombre.Size = new System.Drawing.Size(187, 20);
             this.tbNombre.TabIndex = 3;
             // 
             // label2
@@ -224,7 +150,7 @@
             this.label2.Location = new System.Drawing.Point(44, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Nombre";
             // 
@@ -233,7 +159,7 @@
             this.tbNota.Location = new System.Drawing.Point(111, 68);
             this.tbNota.Margin = new System.Windows.Forms.Padding(4);
             this.tbNota.Name = "tbNota";
-            this.tbNota.Size = new System.Drawing.Size(187, 23);
+            this.tbNota.Size = new System.Drawing.Size(187, 20);
             this.tbNota.TabIndex = 3;
             // 
             // label1
@@ -242,7 +168,7 @@
             this.label1.Location = new System.Drawing.Point(64, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Libreta";
             // 
@@ -251,7 +177,7 @@
             this.tbLU.Location = new System.Drawing.Point(124, 42);
             this.tbLU.Margin = new System.Windows.Forms.Padding(4);
             this.tbLU.Name = "tbLU";
-            this.tbLU.Size = new System.Drawing.Size(187, 23);
+            this.tbLU.Size = new System.Drawing.Size(187, 20);
             this.tbLU.TabIndex = 2;
             // 
             // btmVerAlumno
@@ -265,21 +191,26 @@
             this.btmVerAlumno.UseVisualStyleBackColor = true;
             this.btmVerAlumno.Click += new System.EventHandler(this.btmVerAlumno_Click);
             // 
+            // btnVerResultados
+            // 
+            this.btnVerResultados.Location = new System.Drawing.Point(341, 68);
+            this.btnVerResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerResultados.Name = "btnVerResultados";
+            this.btnVerResultados.Size = new System.Drawing.Size(115, 40);
+            this.btnVerResultados.TabIndex = 6;
+            this.btnVerResultados.Text = "Ver listado";
+            this.btnVerResultados.UseVisualStyleBackColor = true;
+            this.btnVerResultados.Click += new System.EventHandler(this.btnVerResultados_Click);
+            // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 345);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(503, 349);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
-            this.Text = "Ejercicio 3";
-            this.groupBox3.ResumeLayout(false);
-            this.gbOpcion.ResumeLayout(false);
-            this.gbOpcion.PerformLayout();
+            this.Text = "Form1";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -291,10 +222,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox lbxResultadoListado;
-        private System.Windows.Forms.Button btnVerResultados;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbPromedio;
         private System.Windows.Forms.Button btnCalcular;
@@ -308,9 +235,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbLU;
         private System.Windows.Forms.Button btmVerAlumno;
-        private System.Windows.Forms.GroupBox gbOpcion;
-        private System.Windows.Forms.RadioButton rbSuperaronAlPromedio;
-        private System.Windows.Forms.RadioButton rbTodos;
+        private System.Windows.Forms.Button btnVerResultados;
     }
 }
 

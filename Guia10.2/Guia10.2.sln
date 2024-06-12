@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio2", "Ejercicio2\Ej
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio3", "Ejercicio3\Ejercicio3.csproj", "{AEA93AEB-51E3-438A-9B42-FE6ED9DF2FFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio3_ConClaseControladora_Modal", "Ejercicio3_ConClaseControladora\Ejercicio3_ConClaseControladora_Modal.csproj", "{487B5C54-B340-4A84-9C1B-5546D8F8403F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AEA93AEB-51E3-438A-9B42-FE6ED9DF2FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA93AEB-51E3-438A-9B42-FE6ED9DF2FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA93AEB-51E3-438A-9B42-FE6ED9DF2FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{487B5C54-B340-4A84-9C1B-5546D8F8403F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{487B5C54-B340-4A84-9C1B-5546D8F8403F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{487B5C54-B340-4A84-9C1B-5546D8F8403F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{487B5C54-B340-4A84-9C1B-5546D8F8403F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,24 +15,24 @@ namespace Ejercicio2
         #region variables y metodos del dominio
 
         #region datos de alumnos
-        int[] lus = new int[100];
-        string[] nombres = new string[100];
-        double[] notas = new double[100];
+        int[] LUs = new int[100];
+        string[] Nombres = new string[100];
+        double[] Notas = new double[100];
         int contador = 0;
         #endregion
 
-        #region datos Mayores al Promedio MP
-        int[] lusMAP = new int[100];
-        string[] nombresMAP = new string[100];
-        double[] notasMAP = new double[100];
+        #region datos datos MAP: Mayores Al Promedio 
+        int[] LUsMAP = new int[100];
+        string[] NombresMAP = new string[100];
+        double[] NotasMAP = new double[100];
         int contadorMAP = 0;
         #endregion
 
-        void CargarValor(int lu, string nombre, double nota)
+        void RegistrarAlumno(int lu, string nombre, double nota)
         {
-            lus[contador] = lu;
-            nombres[contador] = nombre;
-            notas[contador] = nota;
+            LUs[contador] = lu;
+            Nombres[contador] = nombre;
+            Notas[contador] = nota;
             contador++;
         }
 
@@ -41,7 +41,7 @@ namespace Ejercicio2
             double promedio = 0;
             for (int n = 0; n < contador; n++)
             {
-                promedio += notas[n];
+                promedio += Notas[n];
             }
             if (contador > 0)
                 promedio /= contador;
@@ -53,7 +53,7 @@ namespace Ejercicio2
             double promedioGeneral = CalcularPromedio();
             for (int n = 0; n < contador; n++)
             {
-                if (notas[n] >= promedioGeneral)
+                if (Notas[n] >= promedioGeneral)
                 {
                     AgregarAlumnoMayorAlPromedio(n);
                 }
@@ -62,9 +62,9 @@ namespace Ejercicio2
 
         void AgregarAlumnoMayorAlPromedio(int idx)
         {
-            lusMAP[idx] = lus[idx];
-            nombresMAP[idx] = nombres[idx];
-            notasMAP[idx] = notas[idx];
+            LUsMAP[idx] = LUs[idx];
+            NombresMAP[idx] = Nombres[idx];
+            NotasMAP[idx] = Notas[idx];
 
             contadorMAP++;
         }
@@ -101,7 +101,7 @@ namespace Ejercicio2
             int n = 0;
             while (n < contador && idx == -1)
             {
-                if (lus[n] == numeroBuscar)
+                if (LUs[n] == numeroBuscar)
                 {
                     idx = n;
                 }
@@ -120,11 +120,11 @@ namespace Ejercicio2
             {
                 int c = (sup + inf) / 2;
 
-                if (lus[c] == numeroBuscar)
+                if (LUs[c] == numeroBuscar)
                 {
                     idx = c;
                 }
-                else if (numeroBuscar < lus[c])
+                else if (numeroBuscar < LUs[c])
                 {
                     sup = c - 1;
                 }
@@ -152,7 +152,7 @@ namespace Ejercicio2
             {
                 string nombre = tbNombre.Text;
                 double nota = Convert.ToDouble(tbNota.Text);
-                CargarValor(lu, nombre, nota);
+                RegistrarAlumno(lu, nombre, nota);
             }
             else
             {
@@ -178,16 +178,16 @@ namespace Ejercicio2
             //idx = BusquedaSecuencial(numeroBuscar);
             //
 
-            OrdenarListadoPorLU(lus, nombres, notas, contador);
+            OrdenarListadoPorLU(LUs, Nombres, Notas, contador);
             idx = BusquedaBinaria(luBuscar);
 
             lbxResultadoVer.Items.Clear();
 
             if (idx > -1)
             {
-                lbxResultadoVer.Items.Add($"{lus[idx]}");
-                lbxResultadoVer.Items.Add($"{nombres[idx]}");
-                lbxResultadoVer.Items.Add($"{notas[idx]}:f2");
+                lbxResultadoVer.Items.Add($"{LUs[idx]}");
+                lbxResultadoVer.Items.Add($"{Nombres[idx]}");
+                lbxResultadoVer.Items.Add($"{Notas[idx]}:f2");
             }
             else 
             {
@@ -203,20 +203,20 @@ namespace Ejercicio2
             {
                 CalcularPromedio();
                 DeterminarAlumnosMayoresAlPromedio();
-                OrdenarListadoPorLU(lusMAP, nombresMAP, notasMAP, contadorMAP);
+                OrdenarListadoPorLU(LUsMAP, NombresMAP, NotasMAP, contadorMAP);
 
                 for (int n = 0; n < contadorMAP; n++)
                 {
-                    lbxResultadoListado.Items.Add($"{lusMAP[n]:00000} - {nombresMAP[n]} - {notasMAP[n]:f2}");
+                    lbxResultadoListado.Items.Add($"{LUsMAP[n]:00000} - {NombresMAP[n]} - {NotasMAP[n]:f2}");
                 }
             }
             else if (rbTodos.Checked == true)
             {
-                OrdenarListadoPorLU(lus, nombres, notas, contador);
+                OrdenarListadoPorLU(LUs, Nombres, Notas, contador);
 
                 for (int n = 0; n < contador; n++)
                 {
-                    lbxResultadoListado.Items.Add($"{lus[n]:00000} - {nombres[n]} - {notas[n]:f2}");
+                    lbxResultadoListado.Items.Add($"{LUs[n]:00000} - {Nombres[n]} - {Notas[n]:f2}");
                 }
             }
         }

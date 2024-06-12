@@ -13,15 +13,20 @@ namespace WindowsFormsApp20
     public partial class FormPrincipal : Form
     {
         #region dominio del problema
-        int[] numeros = new int[100];
+        int[] Numeros = new int[100];
         int contador = 0;
+
+        void AgregarNumero(int numero)
+        {
+            Numeros[contador++] = numero);
+        }
 
         double CalcularPromedio()
         {
             double acum = 0, promedio = 0;
             for (int n = 0; n < contador; n++)
             {
-                acum += numeros[n];
+                acum += Numeros[n];
             }
             promedio += acum / contador;
             return promedio;
@@ -33,7 +38,7 @@ namespace WindowsFormsApp20
             int n = 0;
             while (n < contador && idx == -1)
             {
-                if (numeros[n] == numeroBuscar)
+                if (Numeros[n] == numeroBuscar)
                 { 
                     idx = n;
                 }
@@ -52,11 +57,11 @@ namespace WindowsFormsApp20
             {
                 int c = (sup + inf) / 2;
 
-                if (numeros[c] == numeroBuscar)
+                if (Numeros[c] == numeroBuscar)
                 {
                     idx = c;
                 }
-                else if (numeroBuscar<numeros[c])
+                else if (numeroBuscar<Numeros[c])
                 {
                     sup = c-1;
                 }
@@ -74,11 +79,11 @@ namespace WindowsFormsApp20
             {
                 for (int m = n+1; m < contador ; m++)//siguientes
                 {
-                    if (numeros[n] > numeros[m])
+                    if (Numeros[n] > Numeros[m])
                     { 
-                        int aux=numeros[n];
-                        numeros[n] = numeros[m];
-                        numeros[m] = aux;
+                        int aux=Numeros[n];
+                        Numeros[n] = Numeros[m];
+                        Numeros[m] = aux;
                     }
                 }
             }
@@ -92,7 +97,7 @@ namespace WindowsFormsApp20
 
         private void btnAgregarNumero_Click(object sender, EventArgs e)
         {
-            numeros[contador++] = Convert.ToInt32(tbNumero.Text);
+            AgregarNumero(Numeros[contador++] = Convert.ToInt32(tbNumero.Text));
 
             tbNumero.Clear();
         }
@@ -135,7 +140,7 @@ namespace WindowsFormsApp20
 
             for (int n = 0; n < contador; n++)
             {
-                lbxResultado.Items.Add($"{numeros[n]:000}");
+                lbxResultado.Items.Add($"{Numeros[n]:000}");
             }
         }
     }

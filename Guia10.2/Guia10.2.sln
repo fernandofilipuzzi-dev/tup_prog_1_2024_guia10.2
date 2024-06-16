@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio1", "Ejercicio1\Ej
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio2", "Ejercicio2\Ejercicio2.csproj", "{B4A2DDDA-17C2-4760-B0D0-9162A67FD2F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio3", "Ejercicio3\Ejercicio3.csproj", "{AEA93AEB-51E3-438A-9B42-FE6ED9DF2FFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio3_estilo_pancho", "Ejercicio3\Ejercicio3_estilo_pancho.csproj", "{AEA93AEB-51E3-438A-9B42-FE6ED9DF2FFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio3_ConClaseControladora_Modal", "Ejercicio3_ConClaseControladora\Ejercicio3_ConClaseControladora_Modal.csproj", "{487B5C54-B340-4A84-9C1B-5546D8F8403F}"
 EndProject
